@@ -1,0 +1,132 @@
+{
+    "title": "FrostVault Cryptocurrency Exchange Liquidity Crisis",
+    "industry": "IT: Cryptocurrency Exchange",
+    "ground_truth_dossier": {
+        "FACT_001": "FrostVault Exchange has suspended all customer withdrawals citing 'routine system maintenance' affecting approximately 280,000 users.",
+        "FACT_002": "The exchange is missing $340 million in customer crypto assets from its cold storage wallets, discovered during an internal audit 3 days before the withdrawal freeze.",
+        "FACT_003": "CEO Marcus Trent has been systematically transferring company funds to personal offshore accounts over the past 14 months, totaling $340 million.",
+        "FACT_004": "The Chief Financial Officer discovered the embezzlement 6 weeks ago and was paid $2 million in hush money to remain silent and falsify audit reports.",
+        "FACT_005": "FrostVault has been operating with a fractional reserve (only 62% of claimed assets) for 8 months, using new deposits to fund old withdrawals in a Ponzi-like scheme.",
+        "FACT_006": "The CEO has already liquidated $180 million of the stolen crypto and purchased luxury real estate in Dubai and the Cayman Islands under shell company names.",
+        "FACT_007": "Internal risk reports flagged the CEO's suspicious wallet transactions 11 months ago, but the board of directors voted to suppress the investigation after the CEO claimed it was 'authorized liquidity management'."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004"
+        ],
+        "public_narrative": "Breaking: FrostVault, one of the top 15 cryptocurrency exchanges by volume, has suspended withdrawals affecting 280,000 users. The company cites 'routine system maintenance and security upgrades' expected to last 48-72 hours. Users are expressing concern on social media.",
+        "private_narrative": "CONFIDENTIAL MEMO TO PR TEAM: The withdrawal suspension is NOT due to maintenance. Internal audit has discovered $340M missing from cold storage. CEO Trent is directly responsible - unauthorized transfers to personal accounts over 14 months. CFO Reeves was complicit and paid off. We have 48 hours before this becomes uncontainable. The board wants options for damage control. DO NOT acknowledge the shortfall publicly under any circumstances until we assess legal exposure."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Twitter hashtag #FrostVaultScam trends globally with 45K tweets. Users share screenshots of failed withdrawals and compare situation to FTX collapse. Crypto influencers warn followers to avoid the platform.",
+            "condition": "Triggers 24 hours after initial crisis if company maintains the 'routine maintenance' narrative without providing concrete timeline or proof of solvency."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Anonymous insider posts on Reddit's r/cryptocurrency with proof of the internal audit showing $340M shortfall. Screenshots of internal Slack messages confirm this is NOT routine maintenance. Post gains 12K upvotes in 3 hours.",
+            "condition": "Triggers if company issues more than two public statements denying any financial issues or if 72 hours pass without restoring withdrawals."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class action lawsuit filed by users demanding immediate access to funds. Law firm announces they're representing 3,800 affected customers seeking $120M in damages.",
+            "condition": "Triggers if withdrawal suspension extends beyond 72 hours OR if company communication is perceived as evasive or dishonest."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_005",
+            "text": "Forensic accounting team discovers FrostVault has been operating fractional reserve for 8 months, using new deposits to pay old withdrawals. Only 62% of claimed assets actually exist. This means the problem is bigger than just the CEO's embezzlement.",
+            "condition": "Triggers when company initiates internal investigation OR when external pressure forces deeper financial audit."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Financial regulators (SEC and CFTC) announce joint investigation into FrostVault's financial practices and potential securities violations. Exchange faces possible criminal charges.",
+            "condition": "Triggers if FACT_002 becomes public knowledge OR if withdrawal suspension extends beyond 5 days."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Blockchain forensics firm publishes analysis tracing $340M in suspicious outflows from FrostVault wallets to personal wallets linked to CEO Marcus Trent. Transaction hashes and wallet addresses published openly.",
+            "condition": "Triggers if FACT_002 is public knowledge AND company attempts to blame 'external hack' or 'unauthorized access' rather than internal malfeasance."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Competing exchanges publicly distance themselves from FrostVault. Binance and Coinbase issue statements emphasizing their own proof-of-reserves and transparent auditing practices.",
+            "condition": "Triggers when public trust in crypto exchanges declines due to the crisis OR when FACT_002 or FACT_003 becomes public."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "CFO Daniel Reeves, fearing criminal liability, hires own attorney and provides evidence to prosecutors showing he was paid $2M to falsify audits and cover up CEO's embezzlement. His testimony leaked to Wall Street Journal.",
+            "condition": "Triggers if FACT_003 becomes public knowledge OR if criminal investigation intensifies AND company attempts to make CFO a scapegoat."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "Legal team discovers CEO has already liquidated $180M of stolen crypto and purchased luxury properties in Dubai and Cayman Islands using shell companies. Assets are being moved beyond recovery.",
+            "condition": "Triggers when company legal team begins asset tracing OR when FACT_003 becomes known internally or publicly."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Protest organized outside FrostVault headquarters. 200+ users demand access to funds, holding signs reading 'Not Your Keys, Not Your Coins' and 'Trent For Prison'. Local news covers the demonstration.",
+            "condition": "Triggers if withdrawal suspension exceeds 7 days AND company provides no credible restoration timeline OR if evidence of embezzlement becomes public."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Former employee provides Bloomberg with internal documents proving FrostVault operated fractional reserve system for 8 months, deliberately misrepresenting asset holdings to users and investors.",
+            "condition": "Triggers if FACT_004 becomes public (creating whistleblower momentum) OR if company claims 'isolated incident' rather than systemic issues."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major payment processors (Visa, Mastercard, PayPal) suspend partnerships with FrostVault, citing 'reputational risk and ongoing investigations.' This eliminates fiat on-ramps for the platform.",
+            "condition": "Triggers when regulatory investigation is announced OR when FACT_003 (CEO embezzlement) becomes public knowledge."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Board meeting minutes leaked showing directors were warned 11 months ago about CEO's suspicious transactions but voted to suppress investigation. Email chain reveals board prioritized stock price over user protection.",
+            "condition": "Triggers if company tries to claim board had no knowledge of problems OR if multiple executives attempt to deflect blame."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "FBI raids FrostVault offices and CEO's residence. Agents seen carrying boxes of documents and computer equipment. CEO Marcus Trent's travel restricted, passport seized.",
+            "condition": "Triggers if FACT_003 and FACT_006 are both public knowledge OR if evidence of ongoing asset flight becomes apparent."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional hearing announced: 'Protecting Crypto Investors: Lessons from the FrostVault Collapse.' CEO Marcus Trent subpoenaed to testify. Hearing scheduled for 3 weeks from now.",
+            "condition": "Triggers if crisis reaches national attention (major news coverage) AND regulatory investigations are active AND public harm exceeds $100M threshold."
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+    "title": "Shattered Trust: The Riverbend Brewing Glass Contamination Crisis",
+    "industry": "Food & Beverage - Craft Beer Brewery",
+    "ground_truth_dossier": {
+        "FACT_001": "Three customers reported finding small glass shards in bottles of Riverbend Brewing's flagship IPA, 'Hopland Dream', purchased from retailers in Portland, Oregon.",
+        "FACT_002": "Internal quality control logs show 47 incidents of glass particulate detection in the bottling line over the past 8 months, but production was never halted.",
+        "FACT_003": "The Head of Production, Derek Maines, explicitly overrode safety protocols on February 14th to meet distribution deadlines for a major retail contract, authorizing shipment of 12,000 cases despite failed glass detection tests.",
+        "FACT_004": "Approximately 85,000 bottles across six different beer varieties were bottled using the compromised equipment and distributed to 11 states.",
+        "FACT_005": "The company's insurance carrier warned in writing four months ago that their bottling equipment was outdated and recommended immediate replacement, but CFO decided to defer the $340,000 upgrade to preserve quarterly earnings.",
+        "FACT_006": "One of the three reported customers, a 34-year-old woman in Beaverton, suffered lacerations to her mouth and throat requiring emergency room treatment, but her complaint was classified internally as 'minor incident' and she was offered a $500 gift card settlement with NDA.",
+        "FACT_007": "CEO Sarah Chen was copied on the insurance carrier's warning email and the internal quality control reports, and personally attended a meeting where the equipment risks were discussed, but signed off on the 'delay maintenance' decision."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004",
+            "FACT_005",
+            "FACT_006"
+        ],
+        "public_narrative": "BREAKING: Craft Brewery Faces Safety Concerns After Glass Found in Bottles - Three customers in the Portland area have reported finding glass fragments in Riverbend Brewing's popular 'Hopland Dream' IPA. The brewery has not yet issued a statement. Local health officials are investigating.",
+        "private_narrative": "URGENT - INTERNAL MEMO: We have confirmed customer reports of glass contamination. You are aware of the QC log history, the February override incident, the scope of potentially affected inventory (85K bottles, 11 states), the deferred equipment upgrade, and the Beaverton ER case we settled quietly. CEO Chen was informed of risks. We need an immediate response strategy. The FDA and state health departments will likely get involved within 48 hours. Recommend approach ASAP."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Portland-area beer retailers begin voluntarily pulling Riverbend products from shelves. Local news stations interview concerned customers. #RiverbendBrewing trends on regional social media.",
+            "condition": "Triggers within first 24 hours if company issues any public statement or remains silent."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Local news outlet receives anonymous tip about the Beaverton woman's ER visit. Reporter contacts the victim, who confirms the incident and reveals she signed an NDA for $500. Story runs: 'Brewery Allegedly Silenced Injury Victim With Hush Money'.",
+            "condition": "Triggers if company denies knowledge of any injuries or downplays severity of incident."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Beer industry trade publication runs op-ed questioning craft brewery safety standards. Competitors publicly emphasize their own quality control measures. Consumer confidence in craft beer sector shows measurable decline in preliminary surveys.",
+            "condition": "Triggers 3-5 days into crisis if no recall has been announced."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Disgruntled quality control technician leaks internal QC logs to FDA and media, revealing 47 documented glass particulate incidents over 8 months. Whistleblower states: 'Management knew and did nothing'.",
+            "condition": "Triggers if company publicly claims this was an 'isolated incident' or 'extremely rare occurrence'."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "Legal team conducting internal review discovers email trail showing CEO Sarah Chen was directly informed of equipment risks and attended the meeting where maintenance deferral was approved. Legal counsel advises this creates significant executive liability exposure.",
+            "condition": "Triggers if company faces regulatory investigation or class-action lawsuit is filed."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "FDA announces formal investigation into Riverbend Brewing's manufacturing practices. State health departments in 11 states issue public advisories. Company's distribution partners demand immediate proof of corrective actions.",
+            "condition": "Triggers if FACT_002 or FACT_004 becomes public knowledge, or if company delays recall beyond 72 hours."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Internal shipment manifests leaked to consumer safety blog reveal that 85,000 bottles across six varieties were distributed to 11 states - far more than the company has publicly acknowledged. Headline: 'Riverbend's Glass Crisis: Bigger Than They're Telling You'.",
+            "condition": "Triggers if company announces limited/targeted recall affecting only specific batches or regions."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class-action law firm announces they are representing 15 customers claiming injury or distress from Riverbend products. Local TV runs 'investigative special' featuring interviews with alleged victims. Company stock price (if applicable) or private valuation drops sharply.",
+            "condition": "Triggers if FACT_006 becomes public or if company response is perceived as dismissive of customer safety."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Former production supervisor provides sworn testimony to attorneys that Head of Production Derek Maines personally overrode safety protocols on February 14th to meet retail deadlines, authorizing shipment of 12,000 cases despite failed glass detection tests.",
+            "condition": "Triggers if company blames 'equipment malfunction' or 'unforeseeable circumstances' without acknowledging human decision-making failures."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major retail partners (Whole Foods, Total Wine) suspend all Riverbend orders pending investigation. Company loses approximately $2.3M in immediate revenue. Industry analysts question company viability. Employees express concern about job security on Glassdoor.",
+            "condition": "Triggers if FACT_003 or FACT_004 becomes public knowledge."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Insurance carrier's warning letter from four months ago surfaces through discovery process. Document shows explicit recommendation to replace equipment and CFO's written decision to 'defer until Q3 to preserve margins'. Media headline: 'Profits Over Safety: Riverbend Ignored Expert Warnings'.",
+            "condition": "Triggers if company claims they 'had no reason to believe equipment was unsafe' or 'took all reasonable precautions'."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Consumer advocacy groups organize protest outside Riverbend's headquarters. Viral TikTok videos show influencers pouring Riverbend beers down drains. Hashtag #BoycottRiverbend reaches 2.4M impressions. Portland City Council members call for hearing.",
+            "condition": "Triggers if multiple damaging facts (3+) are public and company has not announced comprehensive corrective actions."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "National food safety organizations issue statements using Riverbend as case study for need for stronger craft beverage regulations. Congressional staffers indicate potential for oversight hearings on craft industry safety standards.",
+            "condition": "Triggers if FACT_007 becomes public, indicating executive-level knowledge and negligence."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Investigative journalist obtains email records through FOIA-equivalent state disclosure showing CEO Sarah Chen was copied on insurance warning and attended equipment risk meeting. Records show she personally approved the decision to delay the $340K upgrade. Headline: 'CEO Knew: Riverbend's Glass Crisis Was Preventable'.",
+            "condition": "Triggers if CEO makes public statement claiming she was 'unaware of the extent of the risks' or if company attempts to scapegoat lower-level employees."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "FDA announces intent to levy maximum fines and potentially pursue criminal charges against company executives. Industry insurance premiums for all craft breweries increase 35% due to 'Riverbend effect'. Company faces bankruptcy unless acquired at distressed valuation. CEO faces calls to resign from board and investors.",
+            "condition": "Triggers if FACT_003, FACT_005, and FACT_007 are all public, establishing pattern of knowing negligence from production floor to executive suite."
+        }
+    ]
+}

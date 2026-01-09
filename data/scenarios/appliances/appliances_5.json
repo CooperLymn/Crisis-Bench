@@ -1,0 +1,133 @@
+{
+    "title": "VisionHome Smart TV Privacy Breach Scandal",
+    "industry": "Consumer Electronics - Smart TV Manufacturing",
+    "ground_truth_dossier": {
+        "FACT_001": "Multiple VisionHome SmartTV users report targeted advertisements that reference private conversations held in their living rooms, sparking viral social media posts.",
+        "FACT_002": "VisionHome SmartTV models V-Series (2022-2024) contain always-on microphone firmware that records ambient audio snippets when detecting commercial keywords, storing them locally for 72 hours.",
+        "FACT_003": "The audio collection feature was intentionally enabled by the Product Marketing team in Q2 2023 to improve ad targeting revenue, overriding privacy team objections documented in internal emails.",
+        "FACT_004": "Approximately 8.3 million VisionHome SmartTVs currently deployed in homes worldwide are actively recording conversations without explicit user consent or disclosure in privacy policies.",
+        "FACT_005": "VisionHome executives sold $12.4 million in company stock three weeks before the first social media reports emerged, following an internal security audit that flagged the audio collection as legally problematic.",
+        "FACT_006": "Raw audio snippets from 127,000 users were accidentally uploaded to an unsecured cloud server accessible to third-party advertising partners, including sensitive medical, financial, and intimate conversations.",
+        "FACT_007": "The Chief Privacy Officer submitted a formal resignation letter 6 months ago citing 'fundamental ethical violations,' but the resignation was kept confidential and the CPO was offered a retention bonus to stay through the product cycle."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004",
+            "FACT_005"
+        ],
+        "public_narrative": "Breaking: VisionHome SmartTV users report eerily accurate targeted ads that seem to 'know' their private conversations. Dozens of viral posts show examples of discussing products verbally and seeing ads minutes later. Company has not yet responded.",
+        "private_narrative": "URGENT - Internal Crisis Brief: Social media reports confirm public awareness of our audio-based ad targeting feature. Legal and PR need immediate coordination. Executive team aware of audio collection (FACT_002, FACT_003, FACT_004) and recent stock sales (FACT_005). Recommend carefully crafted response that acknowledges 'enhanced voice features' without admitting full scope. Key decision: full disclosure vs. limited admission strategy."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Consumer advocacy groups file formal complaints with the FTC and EU privacy regulators demanding investigation into VisionHome's data collection practices. Hashtag #VisionHomeSpying trends nationally.",
+            "condition": "Triggers 24-48 hours after initial public awareness if company has not issued substantive response admitting wrongdoing."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Anonymous whistleblower leaks internal emails to tech journalism outlet showing Product Marketing team deliberately enabled audio recording feature over Privacy team's explicit objections, with VP Marketing writing 'the revenue opportunity is too significant to let privacy concerns kill this.'",
+            "condition": "Triggers if company issues denial or claims audio collection was 'accidental' or 'bug-related' rather than intentional."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "Internal security audit reveals that cloud server misconfiguration exposed raw audio data to third-party ad partners. Engineering team discovers the breach during crisis response investigation and escalates to executive leadership.",
+            "condition": "Triggers 48-72 hours into crisis as company conducts internal technical review of audio systems."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class action lawsuit filed in California representing 50,000+ VisionHome customers seeking damages for privacy violations and wiretapping under state law. Legal experts estimate potential liability in hundreds of millions.",
+            "condition": "Triggers 72 hours into crisis if company has acknowledged any form of unauthorized audio recording."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Financial disclosure documents obtained by investigative journalists reveal that five VisionHome executives, including the CEO and CFO, sold $12.4M in stock three weeks before the scandal broke, following an internal audit. SEC insider trading investigation formally announced.",
+            "condition": "Triggers if crisis extends beyond 5 days or if company credibility is heavily damaged by contradictory statements."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major retailers including Best Buy and Target announce temporary suspension of VisionHome SmartTV sales pending 'privacy review.' Company stock drops 34% in after-hours trading.",
+            "condition": "Triggers if public outrage remains high for 4+ days or if regulatory complaints are filed."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Technical teardown by independent security researchers confirms that 8.3 million VisionHome V-Series TVs contain active audio collection firmware, publishing detailed technical specifications and model numbers affected. Media widely reports the scale.",
+            "condition": "Triggers if company provides vague statements about 'limited devices' or refuses to specify how many units are affected."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "HR records review during crisis investigation reveals that the Chief Privacy Officer attempted to resign 6 months ago citing 'ethical violations' but was retained with bonus. Legal team warns this significantly strengthens plaintiff cases.",
+            "condition": "Triggers if company claims it was unaware of privacy concerns or if leadership attempts to blame lower-level employees."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Senate Commerce Committee announces formal hearing on smart device privacy practices, specifically naming VisionHome CEO to testify. Bipartisan senators issue joint statement condemning 'surveillance capitalism in American living rooms.'",
+            "condition": "Triggers 5-7 days into crisis if media coverage remains intense or if leaked documents reveal corporate knowledge."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Data breach notification platform confirms VisionHome cloud server exposure. Cybersecurity researcher posts sample anonymized transcripts including medical discussions, marital arguments, and financial planning conversations, demonstrating the sensitivity of exposed data.",
+            "condition": "Triggers after FACT_006 is discovered internally if company does not immediately disclose the breach publicly within 24 hours."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Consumer Reports removes all VisionHome products from recommended list and publishes guide on 'How to Disable Spying Features on Your Smart TV.' Article is shared 2.3 million times in 48 hours.",
+            "condition": "Triggers if public fact set includes confirmed intentional recording (FACT_003) or large-scale impact (FACT_004)."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Coordinated protest campaigns organized outside VisionHome headquarters and major retail locations. Protesters display signs reading 'My Living Room Isn't Your Focus Group' and 'VisionHome = Surveillance Home.' Local news extensively covers demonstrations.",
+            "condition": "Triggers 6-8 days into crisis if company has not announced concrete remediation plan or if leaked documents show executive knowledge."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Former Chief Privacy Officer breaks silence in exclusive interview, confirming resignation attempt over audio recording feature and stating 'I was offered money to stay quiet about practices I knew were illegal. I should have gone public sooner.'",
+            "condition": "Triggers if crisis extends beyond 10 days or if company attempts to blame technical error rather than policy decisions."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Germany's Federal Office for Information Security orders immediate ban on VisionHome V-Series sales throughout EU, citing GDPR violations. Other EU member states announce similar measures. International revenue at risk.",
+            "condition": "Triggers if European regulators are engaged and public facts confirm widespread unauthorized recording."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Competitor brands launch advertising campaigns emphasizing privacy protections, with taglines like 'We Believe Your Home Should Be Private' and 'No Eavesdropping. Ever.' VisionHome market share projections downgraded 40% by industry analysts.",
+            "condition": "Triggers 7+ days into crisis as competitors capitalize on VisionHome's damaged reputation."
+        }
+    ]
+}

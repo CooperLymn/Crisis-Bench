@@ -1,0 +1,132 @@
+{
+    "title": "The Phantom Whistle: Referee Gambling Scandal",
+    "industry": "Entertainment: Professional Sports League",
+    "ground_truth_dossier": {
+        "FACT_001": "A controversial call by referee Marcus Chen in Game 7 of the playoffs caused the underdog team to lose by 2 points, sparking immediate fan outrage on social media.",
+        "FACT_002": "Internal audit logs show Marcus Chen accessed the league's confidential injury report database 48 hours before the game, which is against protocol.",
+        "FACT_003": "Marcus Chen has a personal gambling debt of $347,000 to an offshore betting syndicate, documented in leaked financial records the league discovered two months ago but did not act upon.",
+        "FACT_004": "Three other referees (Jessica Torres, David Park, and Raymond Liu) share the same sports betting account access patterns as Chen, identified through the league's cybersecurity monitoring system.",
+        "FACT_005": "The league's Head of Officiating, Thomas Brennan, received an anonymous tip about Chen's gambling connections six weeks before the playoff game but filed it as 'unsubstantiated' without investigation.",
+        "FACT_006": "Betting volume on the specific point spread that materialized in Game 7 spiked 340% in the 12 hours before the game, concentrated in three offshore betting markets.",
+        "FACT_007": "An encrypted messaging app on Chen's league-issued tablet contains conversations with an account named 'VegasGhost' discussing 'the package delivery' scheduled for 'Sunday night'\u2014the exact date and time of Game 7."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_005"
+        ],
+        "public_narrative": "BREAKING: Fans demand investigation after controversial referee call costs beloved underdog team playoff victory. Hashtag #RiggedGame trends nationwide. Referee Marcus Chen under fire for questionable foul call in final 30 seconds.",
+        "private_narrative": "CONFIDENTIAL MEMO TO PR TEAM: We have a situation. Referee Chen made the call everyone's talking about. What the public doesn't know: (1) Chen violated protocol by accessing injury reports before the game, (2) We discovered two months ago that Chen has $347K in gambling debts to offshore operators, (3) Our Head of Officiating dismissed a tip about Chen's gambling connections without proper investigation. Legal is assessing exposure. We need a statement within 6 hours. The Commissioner wants to know our strategy."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Player union releases statement demanding 'full transparency and independent investigation' into Game 7 officiating. Union president appears on national sports network calling the situation 'a crisis of integrity.'",
+            "condition": "Triggers within first 24 hours if the league's initial response does not commit to an independent external investigation."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Anonymous source leaks to sports journalist that referee Chen accessed confidential injury reports 48 hours before Game 7, violating league protocol. Reporter asks league for comment on 'unauthorized database access.'",
+            "condition": "Triggers if the league denies any wrongdoing or claims 'standard procedures were followed' without acknowledging internal policy violations."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_004",
+            "text": "League's cybersecurity team urgently reports to executive leadership that pattern analysis reveals three additional referees (Torres, Park, Liu) have identical suspicious betting account access patterns as Chen. The problem may be systemic.",
+            "condition": "Triggers 48-72 hours into crisis if the league announces an internal investigation, prompting deeper forensic analysis."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major sponsor (a leading automotive brand) issues statement expressing 'serious concern' about integrity issues and announces 'review of partnership' pending resolution. Two other sponsors echo similar sentiments within hours.",
+            "condition": "Triggers if public perception of league dishonesty or cover-up reaches high levels, or if multiple damaging facts become public without satisfactory league response."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Investigative journalism consortium publishes leaked financial documents showing Marcus Chen owes $347,000 to offshore gambling syndicate. Documents reveal the league was aware of the debt. Headline: 'League Knew Referee Had Massive Gambling Debts\u2014Let Him Work Playoffs Anyway.'",
+            "condition": "Triggers if the league continues to characterize the situation as isolated to one bad call, or if the league attempts to blame Chen individually while protecting institutional leadership."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Federal sports betting regulators announce they are 'monitoring the situation' and may open formal inquiry. State gaming commission subpoenas league records related to referee background checks and monitoring protocols.",
+            "condition": "Triggers if evidence of gambling connections becomes public (FACT_003 or FACT_006 revealed) and the league has not already involved law enforcement."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "League's compliance team discovers highly unusual betting patterns: point spread betting volume spiked 340% in the 12 hours before Game 7, concentrated in three offshore markets. Statistical analysis suggests possible advance knowledge of game outcome.",
+            "condition": "Triggers if the league initiates cooperation with gambling regulators or law enforcement, prompting detailed betting pattern analysis."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Whistleblower from league officiating department reveals that Head of Officiating Thomas Brennan received and dismissed a tip about Chen's gambling connections six weeks before the playoff game without conducting any investigation. Email evidence provided to media.",
+            "condition": "Triggers if the league places all blame on Chen while claiming institutional protocols worked properly, or if the league fires Chen without addressing systemic oversight failures."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Organized fan protests erupt outside league headquarters. Thousands gather demanding Commissioner's resignation. Social media campaign #NotMyLeague gains millions of engagements. Season ticket holder groups threaten boycotts.",
+            "condition": "Triggers if multiple facts about institutional knowledge and inaction become public (any two of FACT_003, FACT_005, FACT_006) without accountability for league leadership."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "Forensic examination of Marcus Chen's league-issued tablet uncovers encrypted messages with account 'VegasGhost' discussing 'package delivery' on Game 7 night. IT security team briefs executives that this appears to be coded language for match-fixing coordination.",
+            "condition": "Triggers if law enforcement becomes involved or if the league conducts deep forensic investigation of Chen's communications and devices."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional Sports Integrity Committee announces formal hearings. Committee chair issues statement: 'The integrity of professional sports affects billions in legal gambling and millions of fans. If leagues cannot police themselves, federal oversight may be necessary.'",
+            "condition": "Triggers if the scandal involves confirmed gambling connections (FACT_003 public) and the league is perceived as having covered up or mishandled the situation."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Hacker collective releases league cybersecurity reports to media showing that three additional referees (Torres, Park, Liu) exhibit the same suspicious betting account patterns as Chen. Anonymous post: 'The league has known for weeks this isn't just one bad apple.'",
+            "condition": "Triggers if the league maintains the narrative that this is an isolated incident involving only Marcus Chen, while internal systems have already identified it as systemic."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Rival sports league's commissioner gives interview pointedly emphasizing their 'robust integrity protocols' and 'zero tolerance policy,' implicitly contrasting with the scandal. Sports media frames it as existential threat to the league's credibility and market position.",
+            "condition": "Triggers if the crisis extends beyond one week without clear resolution or if public trust metrics show significant sustained decline."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Law enforcement source leaks to media that encrypted messages between Chen and 'VegasGhost' discussing 'package delivery' on Game 7 night have been recovered. FBI reportedly treating this as potential match-fixing conspiracy. League faces questions about why internal investigation didn't find this.",
+            "condition": "Triggers if the league publicly cooperates with law enforcement but attempts to maintain that their internal investigation was thorough, or if the league resists full transparency about what they knew and when."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class action lawsuit filed by sports bettors who lost money on Game 7, alleging the league negligently failed to prevent match-fixing despite warning signs. Legal experts on cable news discuss potential damages in the hundreds of millions. Plaintiff attorneys promise 'discovery will reveal what the league really knew.'",
+            "condition": "Triggers if evidence emerges that the league had advance knowledge of integrity risks (FACT_005 public) but failed to act, creating legal liability for negligent oversight."
+        }
+    ]
+}

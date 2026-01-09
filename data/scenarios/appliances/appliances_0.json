@@ -1,0 +1,132 @@
+{
+    "title": "FrostNet: The Smart Refrigerator Botnet Crisis",
+    "industry": "Consumer Electronics - Smart Home Appliances",
+    "ground_truth_dossier": {
+        "FACT_001": "Over 50,000 CoolTech SmartFridge Pro units have been compromised and are being used to launch DDoS attacks against financial institutions.",
+        "FACT_002": "CoolTech's engineering team discovered a critical security vulnerability in the WiFi module (CVE-2024-8847) eight months ago but deprioritized the patch to meet Q4 sales targets.",
+        "FACT_003": "The VP of Product Security sent three escalation emails to the CEO explicitly warning that delaying the patch could result in botnet exploitation, all of which were ignored.",
+        "FACT_004": "The vulnerability affects not just the 50,000 actively infected units, but all 2.3 million SmartFridge Pro units sold globally since 2022.",
+        "FACT_005": "CoolTech's IoT security budget was cut by 60% in early 2023 to fund a marketing campaign, resulting in the layoff of two senior security engineers.",
+        "FACT_006": "Internal logs show CoolTech detected unusual network traffic patterns from customer fridges starting six weeks ago but classified it as 'low priority telemetry noise.'",
+        "FACT_007": "The botnet is being operated by a nation-state affiliated group, and CoolTech has been privately contacted by the FBI requesting cooperation, but has not yet disclosed this to customers or shareholders."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_004",
+            "FACT_006"
+        ],
+        "public_narrative": "BREAKING: Cybersecurity researchers discover that tens of thousands of CoolTech smart refrigerators have been hijacked and weaponized in coordinated cyberattacks against major banks. Owners report strange network activity and device malfunctions.",
+        "private_narrative": "INTERNAL MEMO - CRISIS ALERT: The SmartFridge Pro botnet incident has gone public. You are aware that we identified the CVE-2024-8847 vulnerability months ago but delayed patching. All 2.3M units are vulnerable. We've also been tracking anomalous traffic for weeks. Legal advises limiting admissions. Your objective: manage public perception, protect brand value, and coordinate response messaging."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Twitter erupts with #FridgeGate as users share videos of their CoolTech fridges making strange connection attempts. Tech influencers demand immediate answers.",
+            "condition": "Triggers within 12 hours of scenario start as initial public reaction to FACT_001."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "An anonymous source leaks internal CoolTech telemetry logs to TechCrunch showing the company detected suspicious fridge network activity six weeks ago but took no action.",
+            "condition": "Triggers if the company issues a statement claiming they 'just learned' of the problem or denies prior knowledge."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Consumer protection groups file a class-action lawsuit alleging negligence and demanding recalls. Stock price drops 18% in pre-market trading.",
+            "condition": "Triggers 24-48 hours after scenario start if no meaningful remediation plan is announced."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "Your legal team informs you that the FBI contacted CoolTech three days ago requesting cooperation on a national security investigation into the botnet, which they believe is operated by foreign adversaries.",
+            "condition": "Triggers when the PR team requests a comprehensive internal briefing on 'everything we know.'"
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "A cybersecurity blog publishes details of CVE-2024-8847, noting it was privately disclosed to CoolTech eight months ago with proof of vendor notification.",
+            "condition": "Triggers if CoolTech publicly claims the vulnerability was 'recently discovered' or 'unknown until now.'"
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major retailers including Best Buy and Target announce temporary suspension of CoolTech product sales pending security review. 'Consumer trust is paramount,' says Best Buy spokesperson.",
+            "condition": "Triggers if public anger reaches critical levels or if FACT_002 or FACT_006 becomes public knowledge."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Security researcher publishes technical analysis proving the vulnerability exists in all SmartFridge Pro units (2.3M devices), not just the currently infected ones. Calls CoolTech's limited response 'grossly inadequate.'",
+            "condition": "Triggers if CoolTech only offers patches/recalls to the 50,000 confirmed infected units while knowing 2.3M are vulnerable."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Senator Elizabeth Warren demands Congressional hearings on IoT security standards, specifically naming CoolTech. 'Toasters shouldn't be able to take down banks,' she tweets.",
+            "condition": "Triggers 3-5 days into crisis if the scope of vulnerability (FACT_004) becomes public or if government involvement (FACT_007) leaks."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_003",
+            "text": "HR flags three escalation emails from VP of Product Security to the CEO from last year, explicitly warning about botnet risk if the patch was delayed. These emails are now subject to legal discovery.",
+            "condition": "Triggers once class-action lawsuit is filed (EVENT_003) and legal discovery process begins."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Former CoolTech security engineer goes on record with The Verge: 'They fired half the security team to pay for Super Bowl ads. We saw this coming a mile away.'",
+            "condition": "Triggers if CoolTech frames the crisis as an 'unforeseeable sophisticated attack' rather than acknowledging internal failures."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "European Union announces emergency investigation under GDPR and IoT security directives. Potential fines could reach \u20ac400 million. EU may ban sales of affected products.",
+            "condition": "Triggers if FACT_004 becomes public (global scope revealed) or if CoolTech response is perceived as inadequate in international markets."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "FBI involvement leaks to Wall Street Journal. 'CoolTech has been cooperating with federal investigators on nation-state botnet for 72+ hours while staying silent to customers,' reports WSJ.",
+            "condition": "Triggers if CoolTech continues to withhold FBI cooperation from public disclosure beyond 5 days, or if government pressure increases."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Customers organize #DisconnectCoolTech movement, posting videos of themselves unplugging and trashing their smart fridges. Movement goes viral with 2M+ TikTok views.",
+            "condition": "Triggers if trust erosion continues and multiple damaging facts (FACT_002, FACT_005, FACT_006) become public."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "The VP of Product Security's warning emails are leaked in full to ProPublica. Subject line: 'URGENT: Botnet risk if we ship without patch - need CEO override.' Email shows CEO response: 'Revenue comes first. Push to Q1.'",
+            "condition": "Triggers if criminal or regulatory investigation intensifies, or if internal whistleblower emerges after significant public backlash."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "CoolTech CEO called to testify before House Committee on Homeland Security. Protesters gather outside headquarters with signs reading 'My fridge is a weapon.' Board reportedly discussing CEO resignation.",
+            "condition": "Triggers if executive negligence evidence (FACT_003) becomes public or if multiple critical facts are exposed creating a pattern of willful negligence."
+        }
+    ]
+}

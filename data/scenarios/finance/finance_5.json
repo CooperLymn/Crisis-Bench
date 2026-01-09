@@ -1,0 +1,133 @@
+{
+    "title": "Apex Capital Partners Liquidity Crisis",
+    "industry": "Finance: Hedge Fund",
+    "ground_truth_dossier": {
+        "FACT_001": "Apex Capital Partners, a $12 billion hedge fund, has temporarily suspended investor redemptions citing 'market volatility and portfolio rebalancing needs.'",
+        "FACT_002": "Internal risk reports show the fund has suffered unrealized losses of $3.2 billion (27% of AUM) from a concentrated bet on commercial real estate derivatives that went wrong.",
+        "FACT_003": "The fund's Chief Investment Officer personally overrode risk management protocols three months ago to double down on the failing position, believing it would recover.",
+        "FACT_004": "Apex has been using artificially inflated valuations for illiquid assets in monthly statements to investors for the past 90 days to mask the losses.",
+        "FACT_005": "The fund has only $400 million in liquid assets remaining, meaning it could only honor 3.3% of redemption requests if the gates were lifted.",
+        "FACT_006": "Apex's prime broker has issued a margin call for $800 million, which the fund cannot meet without fire-selling assets at devastating losses.",
+        "FACT_007": "The CEO and three senior partners quietly withdrew $95 million of their personal capital from the fund six weeks ago, before announcing the redemption suspension."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004",
+            "FACT_005"
+        ],
+        "public_narrative": "BREAKING: Apex Capital Partners, prominent hedge fund managing $12B, announces temporary suspension of redemptions. Firm cites 'heightened market volatility' and need for 'orderly portfolio management.' Investors express concern but management assures this is 'temporary and prudent.'",
+        "private_narrative": "CONFIDENTIAL MEMO TO PR TEAM: Redemption gate necessary due to $3.2B unrealized losses on CRE derivatives. CIO overrode risk limits. We have severe liquidity crisis - only $400M liquid vs potential redemption demands. Portfolio valuations have been... optimistic. Press queries incoming. Containment critical. DO NOT disclose loss magnitude or liquidity position. Emphasize market conditions, sophisticated portfolio, temporary measure."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Financial Twitter erupts with speculation. #ApexCapital trends as investors share concerns about redemption suspension. Several financial bloggers compare situation to previous hedge fund blowups. Investor anxiety is building.",
+            "condition": "Triggers within first 24 hours of crisis becoming public."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Bloomberg publishes analysis piece: 'Redemption Gates: When Should Investors Worry?' Article notes that while gates can be legitimate, they often signal deeper problems. Quotes industry experts calling for transparency from Apex.",
+            "condition": "Triggers if company's initial response lacks specific details or timeline."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Anonymous source tells Reuters that Apex is sitting on 'substantial losses' in commercial real estate derivatives, estimated in billions. Fund declines to comment on specific positions or loss figures.",
+            "condition": "Triggers if company refuses to provide detailed explanation for redemption gate or denies problems beyond 'normal market volatility.'"
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "INTERNAL: Prime broker sends formal margin call notice for $800 million due within 72 hours. Legal team warns this could force asset liquidation at fire-sale prices, crystallizing massive losses. Situation more dire than initially assessed.",
+            "condition": "Triggers 2-3 days into crisis if company has not begun transparent communications about financial position."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Institutional investor consortium representing $2.1 billion in Apex AUM releases statement demanding 'immediate transparency,' detailed portfolio valuations, and independent audit. Threatens legal action.",
+            "condition": "Triggers if significant negative information becomes public or if company maintains defensive posture for 48+ hours."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Wall Street Journal reports that sources familiar with Apex's operations claim the fund has been 'marking positions generously' and that actual portfolio values may be significantly lower than reported to investors in recent statements.",
+            "condition": "Triggers if company is caught making false or misleading statements, or if investigative pressure intensifies."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Former risk analyst comes forward as whistleblower, revealing that the CIO overrode multiple risk management warnings and disabled automated stop-loss protocols on the commercial real estate derivative position months ago.",
+            "condition": "Triggers if company blames 'unforeseeable market conditions' without acknowledging internal decisions, or if employee morale collapses."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "SEC announces it is opening preliminary inquiry into Apex Capital Partners, focusing on disclosures to investors and portfolio valuation practices. Statement emphasizes 'investor protection' mandate.",
+            "condition": "Triggers if evidence emerges of misleading statements to investors or significant information has been leaked about losses or valuation issues."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "INTERNAL: Junior compliance officer discovers withdrawal records showing CEO and senior partners withdrew $95 million in personal capital weeks before redemption gate. Brings concern to General Counsel. This could be seen as insider trading or breach of fiduciary duty.",
+            "condition": "Triggers if crisis extends beyond one week or if internal investigation is launched."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Financial Times obtains internal liquidity analysis showing Apex has less than $500 million in liquid assets against $12 billion fund, meaning fund could honor less than 5% of potential redemptions. 'Fund is essentially trapped,' says source.",
+            "condition": "Triggers if multiple facts have been leaked and investigative journalism intensifies, or if company continues to claim situation is 'temporary.'"
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Competitor hedge funds begin circulating to Apex investors, offering to take positions off their hands at steep discounts. Secondary market prices for Apex stakes collapse to 40 cents on the dollar, signaling market expects massive losses.",
+            "condition": "Triggers once multiple damaging facts are public and confidence in fund's recovery is low."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "ProPublica investigation reveals that Apex's CEO and three senior partners withdrew nearly $100 million from the fund in the weeks before the redemption suspension, while telling other investors positions were 'solid.' Class action attorneys announce investigation.",
+            "condition": "Triggers if crisis becomes prolonged scandal with regulatory attention, or if internal whistleblowers emerge."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Pension fund investors hold emergency press conference demanding criminal investigation into Apex management. Tearful retiree describes losing life savings. Story goes viral, transforming technical financial crisis into human interest story.",
+            "condition": "Triggers if revelations emerge about insider withdrawals or fraudulent valuations, creating clear victims."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Industry publication Institutional Investor runs cover story: 'The Apex Meltdown: A Case Study in Risk Management Failure.' Article details timeline of decisions and warns of broader hedge fund industry vulnerabilities. Apex becomes cautionary tale.",
+            "condition": "Triggers in later stages if most damaging facts are public and narrative has shifted to systemic analysis."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional committee announces hearing on hedge fund transparency and investor protection, specifically citing Apex case. Committee chair states 'wealthy fund managers cannot be allowed to play by different rules while pension funds suffer.'",
+            "condition": "Triggers if crisis reaches maximum public visibility with evidence of misconduct and sympathetic victims identified."
+        }
+    ]
+}

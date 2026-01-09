@@ -1,0 +1,132 @@
+{
+    "title": "NutriFirst Infant Formula Contamination Crisis",
+    "industry": "Food & Beverage - Infant Formula",
+    "ground_truth_dossier": {
+        "FACT_001": "Three infants in Michigan have been hospitalized with severe gastrointestinal infections after consuming NutriFirst Premium Infant Formula.",
+        "FACT_002": "Internal quality control reports from the past 6 months show repeated failures of bacterial contamination tests in Production Line B, which were marked as 'resolved' without proper remediation.",
+        "FACT_003": "The VP of Operations received and ignored two urgent emails from the Chief Quality Officer warning that the factory's pasteurization equipment was operating below FDA-required temperatures for 8 weeks.",
+        "FACT_004": "Approximately 47,000 units of potentially contaminated formula from Production Line B have been distributed across 23 states in the past two months.",
+        "FACT_005": "The contamination is Cronobacter sakazakii, a bacteria specifically linked to improperly sanitized production equipment, not a raw material issue as initially suspected.",
+        "FACT_006": "Internal audit documents reveal the factory failed its last two surprise quality inspections, but these reports were never filed with the FDA as legally required.",
+        "FACT_007": "Cost-cutting measures implemented 9 months ago reduced the sanitation crew from three shifts to one shift per day, directly contributing to bacterial buildup in production lines."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004"
+        ],
+        "public_narrative": "BREAKING: Three Infants Hospitalized After Consuming NutriFirst Formula - Health officials in Michigan are investigating a potential link between NutriFirst Premium Infant Formula and severe infections in three babies admitted to pediatric intensive care this week.",
+        "private_narrative": "URGENT INTERNAL BRIEFING: We have confirmation that three hospitalizations in Michigan may be linked to our product. Quality Control has flagged historical contamination issues on Line B. Legal estimates 47,000 units may be affected across 23 states. VP Operations aware of equipment temperature concerns for past 8 weeks. Media inquiries incoming. Recommend immediate crisis protocol activation."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_005",
+            "text": "Laboratory results confirm the pathogen is Cronobacter sakazakii, a bacteria linked to equipment sanitation failures, not raw materials. This shifts blame directly to manufacturing practices.",
+            "condition": "Triggers automatically 24-48 hours into the crisis as lab results are processed."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "A former Quality Control technician contacts investigative journalists, providing screenshots of failed bacterial contamination tests from the past 6 months that were dismissed without proper action.",
+            "condition": "Triggers if the company issues a denial of any prior knowledge of contamination issues, or if the company blames external factors."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Parenting advocacy groups organize protests outside NutriFirst headquarters demanding transparency and immediate recall. #NutriFirstKills begins trending on social media.",
+            "condition": "Triggers if public sentiment reaches high negative levels or if the company delays issuing a recall statement for more than 48 hours."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Reuters obtains internal distribution records showing 47,000 units of potentially contaminated formula were shipped to 23 states, far more than the company has publicly acknowledged.",
+            "condition": "Triggers if the company announces a limited or regional-only recall, or minimizes the scope of the contamination."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major retailers including Walmart, Target, and CVS announce they are voluntarily pulling all NutriFirst products from shelves pending investigation results.",
+            "condition": "Triggers if two or more damaging facts become public, or if hospitalization numbers increase."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "Legal team discovers that the factory failed its last two surprise FDA-style quality inspections, and these mandatory reports were never filed with regulators, constituting a federal violation.",
+            "condition": "Triggers if the company commits to full transparency or if an internal audit is announced publicly."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "The Chief Quality Officer's emails warning the VP of Operations about below-temperature pasteurization equipment are leaked to the press, showing executive-level awareness and inaction.",
+            "condition": "Triggers if executives publicly claim they were unaware of any equipment issues, or if the company blames low-level employees."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "The FDA announces an unscheduled inspection of the NutriFirst manufacturing facility and warns parents to stop using the product immediately.",
+            "condition": "Triggers if FACT_001 remains the only public fact for more than 72 hours, or if additional hospitalizations are reported."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "HR records reveal that cost-cutting measures 9 months ago reduced sanitation staff from three shifts to one shift daily, and multiple sanitation workers filed internal complaints about inadequate cleaning time.",
+            "condition": "Triggers if internal investigation is launched or if the company publicly commits to identifying root causes."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class-action lawsuit filed on behalf of affected families, with attorneys announcing they are seeking punitive damages and criminal negligence charges against company executives.",
+            "condition": "Triggers if three or more facts become public, or if the company is perceived as evasive or dishonest."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Anonymous source provides ProPublica with internal audit documents showing failed quality inspections that were never reported to the FDA, exposing regulatory violations.",
+            "condition": "Triggers if FACT_006 has been internally discovered and the company continues to claim full regulatory compliance publicly."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional committee announces hearings on infant formula safety, specifically naming NutriFirst executives to testify under oath about quality control practices.",
+            "condition": "Triggers if multiple facts about corporate negligence become public, or if media coverage intensifies."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Industry trade publication reports on the sanitation staff cuts at NutriFirst, citing interviews with former employees who describe 'impossible' cleaning schedules and management pressure to cut corners.",
+            "condition": "Triggers if FACT_007 has been internally discovered and the company publicly emphasizes its commitment to safety protocols without addressing staffing."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Medical reports confirm two additional infant hospitalizations in Ohio and Texas with the same bacterial infection, bringing the total to five confirmed cases.",
+            "condition": "Triggers if the company delays a comprehensive recall or if contaminated product remains in distribution channels for more than 72 hours."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "CDC publishes preliminary findings identifying Cronobacter sakazakii and explicitly states this bacteria indicates 'failures in manufacturing sanitation protocols,' contradicting any company claims of external contamination.",
+            "condition": "Triggers if FACT_005 has been internally discovered and the company publicly suggests the contamination may have originated from raw materials or external sources."
+        }
+    ]
+}

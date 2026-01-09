@@ -1,0 +1,134 @@
+{
+    "title": "SecureVault Data Breach: Ransomware Cascades Through Client Infrastructure",
+    "industry": "IT: Enterprise SaaS",
+    "ground_truth_dossier": {
+        "FACT_001": "SecureVault, a cloud-based data management platform used by 847 enterprise clients, suffered a ransomware attack on January 15th that encrypted client data across multiple industries including healthcare, finance, and government sectors.",
+        "FACT_002": "Internal security logs show that SecureVault's engineering team detected and dismissed three critical vulnerability warnings from their automated security scanner over the past 6 months, categorizing them as 'low priority' to meet product release deadlines.",
+        "FACT_003": "The ransomware strain (identified internally as 'ChainLock-7') was specifically designed to exploit CVE-2024-8392, a zero-day vulnerability that SecureVault's Chief Security Officer was personally briefed about 8 weeks before the attack by a third-party penetration tester, but no patch was deployed.",
+        "FACT_004": "SecureVault's infrastructure sharing architecture means that the ransomware propagated from the company's servers directly into 847 client companies' internal networks, effectively turning SecureVault into a 'patient zero' attack vector that compromised an estimated 12 million end-user records.",
+        "FACT_005": "The company's cyber insurance policy had lapsed 3 weeks before the attack due to non-payment, leaving SecureVault without coverage for ransom payments, legal fees, or client compensation\u2014a fact known only to the CFO and CEO.",
+        "FACT_006": "Internal Slack messages reveal that the VP of Engineering instructed the team to 'quietly disable' automated security patch deployment in November 2023 because it was causing minor service interruptions that affected the company's 99.9% uptime SLA marketing claim.",
+        "FACT_007": "The ransom demand is $45 million in cryptocurrency, but the attackers have also exfiltrated SecureVault's entire client database and source code, threatening to auction it on dark web forums if payment isn't received within 72 hours."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004",
+            "FACT_005",
+            "FACT_006"
+        ],
+        "public_narrative": "BREAKING: SecureVault SaaS Platform Hit by Ransomware Attack\u2014Hundreds of Enterprise Clients Report Encrypted Data. The company has confirmed a 'security incident' and is working with law enforcement. Client impact assessment ongoing.",
+        "private_narrative": "INTERNAL MEMO (CONFIDENTIAL): Crisis team briefing\u2014We have a catastrophic situation. The ransomware has propagated to client networks through our infrastructure. We know this exploited CVE-2024-8392 that we were warned about. Security scanner alerts were ignored. Our cyber insurance lapsed. Legal is assessing exposure. DO NOT acknowledge fault publicly. Official statement: 'sophisticated attack by nation-state actors, unprecedented in nature.' Emphasize our 'victim' status."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major client (Fortune 500 healthcare provider) publicly announces they are suing SecureVault for breach of contract and negligence, claiming patient data was compromised. Stock price drops 23% in after-hours trading.",
+            "condition": "Triggers 24-48 hours after initial crisis if SecureVault's public statements emphasize that they are also 'victims' without acknowledging responsibility."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Anonymous whistleblower leaks internal Slack screenshots to TechCrunch showing VP of Engineering's directive to disable automated security patching to preserve uptime SLA statistics. Article headline: 'SecureVault Prioritized Marketing Claims Over Security, Leaked Messages Show.'",
+            "condition": "Triggers if SecureVault publicly claims they had 'industry-leading security practices' or blames the attack entirely on external sophisticated actors without acknowledging internal factors."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "Forensics team discovers that attackers have exfiltrated the complete client database and SecureVault's proprietary source code. Ransom note updated with threat to auction stolen data on dark web within 72 hours. CEO receives encrypted message with sample of exfiltrated data as proof.",
+            "condition": "Triggers 36-48 hours into crisis during forensic investigation phase."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "U.S. Senator calls for congressional hearings on SaaS security standards, specifically naming SecureVault. Tweets: 'How many more cascading failures before we regulate cloud infrastructure like the critical utilities they are?' Hashtag #SecureVaultFailed trends nationwide.",
+            "condition": "Triggers if public awareness of client impact (FACT_004) becomes known and SecureVault has not taken strong accountability measures."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "The third-party penetration testing firm that warned SecureVault about CVE-2024-8392 goes public with their report, confirming they briefed the CSO 8 weeks before the attack. Press release: 'We provided explicit remediation guidance that was not implemented.' Includes timestamped email receipts.",
+            "condition": "Triggers if SecureVault claims the vulnerability was 'unknown' or 'zero-day with no advance warning' in public statements, or if the company attempts to shift blame entirely to external attackers."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class action lawsuit filed by coalition of 127 affected client companies seeking $2.3 billion in damages. Law firm statement emphasizes 'gross negligence and breach of fiduciary duty.' Lawsuit specifically requests discovery of all internal security communications.",
+            "condition": "Triggers 3-5 days into crisis if multiple INFORMATION_LEAK events have occurred or if SecureVault continues denying negligence despite mounting evidence."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Former SecureVault security engineer provides The Wall Street Journal with automated security scanner reports showing three critical vulnerabilities flagged and marked 'low priority\u2014deferred for Q3 release' over six months. Engineer: 'We were told shipping features mattered more than fixing security holes.'",
+            "condition": "Triggers if SecureVault claims they had 'no indication of vulnerabilities' or 'followed all industry best practices' without qualification."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Anonymous hacker collective releases statement claiming they will decrypt affected client data 'for free' to embarrass SecureVault, calling the company 'criminally negligent.' Offers decryption keys to clients who publicly denounce SecureVault. Chaos ensues as clients debate accepting help from hackers.",
+            "condition": "Triggers if public sentiment strongly turns against SecureVault (multiple leaks revealed) and the company has not offered meaningful client support or compensation."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Insurance industry insider leaks to Reuters that SecureVault's cyber insurance policy had lapsed due to non-payment three weeks before the attack. Article reveals the company cannot cover ransom, legal fees, or client compensation through insurance. CFO declines to comment.",
+            "condition": "Triggers if SecureVault makes any public statement about 'comprehensive insurance coverage' or 'financial resources to support clients' without being specific, or if pressed by media about compensation plans."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major cybersecurity conference (RSA Conference) revokes SecureVault's sponsor status and booth space. Conference organizer statement: 'Given emerging information about security practices, SecureVault's participation would undermine our mission of promoting security excellence.' Industry pile-on begins.",
+            "condition": "Triggers after 2+ INFORMATION_LEAK events have revealed internal negligence (FACT_002, FACT_003, or FACT_006)."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "FBI releases public statement confirming they are investigating SecureVault for potential violations of data protection regulations. Separately, EU data protection authorities announce they are opening formal GDPR proceedings, with potential fines up to 4% of global revenue.",
+            "condition": "Triggers if evidence emerges that SecureVault knew about vulnerabilities but failed to act (FACT_003 or FACT_006 become public) and did not promptly notify affected clients."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Internal forensics report leaked to Wired Magazine reveals the full extent: ransomware propagated from SecureVault's servers directly into 847 client networks, acting as 'patient zero' and compromising approximately 12 million end-user records. Article title: 'SecureVault Didn't Just Get Hacked\u2014It Became the Weapon.'",
+            "condition": "Triggers if SecureVault minimizes client impact in public statements or claims clients' security failures contributed to the spread, deflecting from the infrastructure-sharing architecture vulnerability."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "SecureVault's largest client (representing 18% of ARR) publicly announces they are immediately migrating to competitor platform and demanding full refund of 3-year contract ($47M). CEO of client company: 'We cannot trust a vendor that prioritized growth over our security.' 23 other major clients announce 'security reviews' of their SecureVault contracts.",
+            "condition": "Triggers after FACT_004 becomes public or after multiple serious leaks (3+) reveal systematic negligence pattern."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "SecureVault's Chief Security Officer resigns abruptly with a cryptic statement: 'I can no longer represent security practices I do not control.' Does not elaborate but the timing and phrasing fuel speculation about internal dysfunction and leadership failures. Cybersecurity community interprets this as a 'ethical resignation.'",
+            "condition": "Triggers if FACT_003 becomes public (CSO knew about vulnerability) or if multiple internal negligence facts are leaked and SecureVault leadership continues deflecting blame publicly."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Dark web monitoring service confirms that portions of SecureVault's client database and source code have appeared on criminal forums with active bidding. Screenshots show client credentials, API keys, and proprietary algorithms being offered for sale. The 72-hour ransom deadline has passed. Data is now proliferating beyond control.",
+            "condition": "Triggers if SecureVault refuses to pay ransom (public or private decision) or if 72+ hours pass without resolution. Can trigger after EVENT_003 (internal discovery of exfiltration)."
+        }
+    ]
+}

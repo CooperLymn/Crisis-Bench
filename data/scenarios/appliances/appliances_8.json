@@ -1,0 +1,132 @@
+{
+    "title": "AquaSpin 3000 Flooding Crisis",
+    "industry": "Home Appliances - Washing Machines",
+    "ground_truth_dossier": {
+        "FACT_001": "Multiple apartment buildings have reported severe flooding traced to AquaSpin 3000 washing machines, with at least 47 documented incidents across 12 states in the past 3 months.",
+        "FACT_002": "Internal engineering reports from 8 months ago identified a critical design flaw in the drain pump housing that causes catastrophic seal failure under normal operating conditions.",
+        "FACT_003": "The VP of Product Development personally approved a cost-cutting measure that replaced the original reinforced polymer housing with a cheaper alternative, despite warnings from the engineering team about reduced structural integrity.",
+        "FACT_004": "Approximately 340,000 units with the defective drain pump housing have been sold across North America, with 89% still in active use.",
+        "FACT_005": "The company's internal risk assessment team calculated that full recall costs would exceed $180 million, and recommended a 'monitor and settle' strategy for individual incidents instead.",
+        "FACT_006": "Three company engineers submitted formal safety complaints through internal channels 6 months ago, which were suppressed by mid-level management and never escalated to the executive team.",
+        "FACT_007": "Laboratory testing conducted last week confirmed that the seal failure rate accelerates dramatically after 200 wash cycles, which 73% of sold units have already exceeded."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_004",
+            "FACT_005"
+        ],
+        "public_narrative": "BREAKING: Dozens of apartment residents report devastating water damage from popular AquaSpin 3000 washing machines. Renters face thousands in damages as flooding incidents mount. Company has not yet issued statement.",
+        "private_narrative": "INTERNAL MEMO - CRISIS RESPONSE TEAM: We have confirmation of 47 flooding incidents linked to AquaSpin 3000 units. Engineering identified the drain pump seal issue 8 months ago (see attached report). Legal estimates 340K affected units in circulation. Finance projects recall costs at $180M+. We need messaging strategy ASAP. Media inquiries flooding in. Executive team wants options before market open."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Viral TikTok video shows young mother's apartment flooded with 3 inches of water, baby crib soaked. Video reaches 8.4M views with hashtag #AquaSpinDisaster trending nationally.",
+            "condition": "Triggers within first 48 hours regardless of company response."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Anonymous source leaks internal engineering report to Consumer Watchdog News, revealing the company knew about the drain pump design flaw 8 months before the first flooding incident was reported.",
+            "condition": "Triggers if company issues denial of prior knowledge or claims incidents are isolated/unrelated."
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class-action law firm announces investigation into AquaSpin 3000 flooding incidents and sets up dedicated hotline for victims. Local news runs segment interviewing affected families.",
+            "condition": "Triggers 72 hours after initial crisis regardless of company actions."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_003",
+            "text": "Internal investigation by crisis team uncovers email chain showing VP of Product Development explicitly approved switching to cheaper drain pump housing despite engineering warnings about structural integrity risks.",
+            "condition": "Triggers if company launches internal investigation or if external pressure for accountability intensifies."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Whistleblower provides documents to investigative journalists showing internal risk assessment recommended avoiding full recall to save $180 million, opting instead to settle individual cases quietly.",
+            "condition": "Triggers if company announces limited remediation plan rather than full recall, or if company appears to be stonewalling."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Consumer Product Safety Commission (CPSC) announces formal investigation into AquaSpin 3000 washing machines and requests all internal testing data and incident reports from the company.",
+            "condition": "Triggers if public pressure reaches critical threshold or if leaked documents surface."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "HR department uncovers suppressed safety complaints from three engineers filed 6 months ago through internal ethics hotline, revealing mid-level management buried the warnings to avoid project delays.",
+            "condition": "Triggers if company claims executive leadership was unaware of problems, or during internal investigation process."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major retailers including HomeDepot and Lowe's announce temporary suspension of AquaSpin 3000 sales pending company response. Stock price drops 12% in after-hours trading.",
+            "condition": "Triggers if company response is perceived as inadequate or if damaging information becomes public."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Reuters obtains internal sales database showing 340,000 defective units were sold, contradicting company's public statements suggesting incidents affect only a 'small number' of machines.",
+            "condition": "Triggers if company downplays scale of the problem or provides vague numbers about affected units."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Tenant rights advocacy groups organize protests outside company headquarters. Media coverage shows families holding photos of flood-damaged homes and ruined possessions.",
+            "condition": "Triggers if company fails to offer victim compensation or if response is perceived as corporate indifference."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "New laboratory testing reveals the seal failure rate increases exponentially after 200 wash cycles, and most sold units have already exceeded this threshold, meaning failures will accelerate rapidly.",
+            "condition": "Triggers if company initiates comprehensive product testing or if external agencies demand testing data."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Former engineer goes public on 60 Minutes, revealing VP of Product Development personally overruled safety concerns to cut costs, with emails showing explicit warnings about 'high probability of catastrophic failure in residential settings.'",
+            "condition": "Triggers if executive accountability is not addressed or if whistleblower protections fail internally."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Property insurance companies announce they will seek subrogation claims against the manufacturer for all flood damages. Industry analysts estimate potential liability could exceed $400 million.",
+            "condition": "Triggers once the scale of affected units becomes public knowledge or incidents continue mounting."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Internal ethics hotline recordings leaked to media show engineers explicitly warned 'someone is going to get hurt or lose their home' and management response was to reassign complainants to different projects.",
+            "condition": "Triggers if company claims robust safety culture or if retaliation against whistleblowers is suspected."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional committee announces hearing on consumer appliance safety oversight, specifically citing AquaSpin 3000 case. CEO and VP of Product Development receive subpoenas to testify under oath.",
+            "condition": "Triggers if crisis reaches national significance with evidence of corporate negligence or regulatory failure."
+        }
+    ]
+}

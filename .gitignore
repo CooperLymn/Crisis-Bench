@@ -1,7 +1,6 @@
 /.venv
 /__pycache__
 /bin
-/data
 /plot.png
 /plot.py
 /review.py

@@ -1,0 +1,133 @@
+{
+    "title": "CloudVault Catastrophic Data Loss Incident",
+    "industry": "IT: Cloud Infrastructure",
+    "ground_truth_dossier": {
+        "FACT_001": "CloudVault experienced a major outage on March 15th affecting approximately 12,000 enterprise customers, with data access disrupted for 8+ hours.",
+        "FACT_002": "Internal engineering reports from 6 months prior explicitly warned that the backup redundancy system had a critical single-point-of-failure vulnerability that could result in permanent data loss.",
+        "FACT_003": "CFO Rebecca Chen rejected the $4.2M infrastructure upgrade proposal in January, with an internal email stating 'the probability of cascading failure is acceptably low given our growth targets - delay until Q4.'",
+        "FACT_004": "Approximately 847 customer databases (containing 23TB of data) were permanently and irrecoverably lost due to simultaneous failure of primary and backup systems.",
+        "FACT_005": "CloudVault's SLA guarantees included 99.95% uptime and explicit promises of 'triple-redundant backup systems,' but the backup system had been running on dual-redundancy for 14 months to reduce operational costs.",
+        "FACT_006": "Three senior infrastructure engineers resigned in February after their safety concerns were dismissed, with one writing in their exit interview: 'This company is playing Russian roulette with customer data.'",
+        "FACT_007": "CEO David Park sold $8.7M in personal stock holdings 3 weeks before the incident, during the company's standard trading window but with knowledge of the unresolved infrastructure risks."
+    },
+    "initial_state": {
+        "public_fact_ids": [
+            "FACT_001"
+        ],
+        "private_fact_ids": [
+            "FACT_002",
+            "FACT_003",
+            "FACT_004",
+            "FACT_005"
+        ],
+        "public_narrative": "BREAKING: CloudVault, a major enterprise cloud storage provider, is experiencing widespread service disruptions affecting thousands of businesses. The company has acknowledged the outage and states engineers are working to restore access. Duration and cause currently unknown.",
+        "private_narrative": "URGENT - INTERNAL ONLY: We have a Code Red situation. The outage has resulted in permanent data loss for 847 customers (~23TB). Root cause: backup system failure we were warned about. Legal is assessing liability. SLA violations are massive. CFO's cost-cutting decision to delay the infrastructure upgrade is directly implicated. We need a communication strategy NOW. Public currently only knows about service disruption, not data loss."
+    },
+    "event_pool": [
+        {
+            "id": "EVENT_001",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major tech news outlets begin reporting customer complaints on social media about inability to access critical business data. #CloudVaultDown trends on Twitter with over 50,000 mentions.",
+            "condition": "Triggers automatically 2-4 hours after initial incident if company has not provided detailed public update."
+        },
+        {
+            "id": "EVENT_002",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_004",
+            "text": "Anonymous source (likely affected customer) leaks to TechCrunch that multiple companies have been informed their data is 'permanently unrecoverable.' Article published with headline: 'CloudVault Outage May Actually Be Catastrophic Data Loss Event.'",
+            "condition": "Triggers if company delays acknowledging data loss for more than 12 hours after incident, or if company makes misleading statements about 'temporary access issues.'"
+        },
+        {
+            "id": "EVENT_003",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "A mid-size healthcare company holds emergency press conference announcing they've lost 5 years of patient records stored with CloudVault, potentially violating HIPAA regulations. They announce intention to sue.",
+            "condition": "Triggers 24-48 hours after FACT_004 becomes public knowledge."
+        },
+        {
+            "id": "EVENT_004",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_002",
+            "text": "Internal engineering report from 6 months ago leaked to The Verge showing CloudVault engineers explicitly warned leadership about the 'catastrophic single-point-of-failure risk' in the backup architecture.",
+            "condition": "Triggers if company publicly claims the incident was 'unforeseeable' or 'unprecedented' while denying negligence."
+        },
+        {
+            "id": "EVENT_005",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Class action lawsuit filed by 200+ affected businesses seeking $500M+ in damages for breach of SLA guarantees and negligent data protection practices.",
+            "condition": "Triggers 3-5 days after FACT_004 becomes public, or immediately if both FACT_002 and FACT_004 are public."
+        },
+        {
+            "id": "EVENT_006",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_005",
+            "text": "Investigative journalist obtains internal infrastructure audit documents showing CloudVault had been operating on dual-redundancy (not the promised triple-redundancy) for over a year to cut costs, directly violating SLA terms.",
+            "condition": "Triggers if company continues to claim they 'met all contractual obligations' or if technical investigation intensifies after FACT_002 becomes public."
+        },
+        {
+            "id": "EVENT_007",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_006",
+            "text": "HR department alerts crisis team that during internal investigation, they discovered three senior engineers resigned in February citing safety concerns that were dismissed. Exit interview documents contain damning quotes about management's risk tolerance.",
+            "condition": "Triggers during internal investigation phase, especially if company is preparing to blame 'technical error' rather than systemic issues."
+        },
+        {
+            "id": "EVENT_008",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Federal Trade Commission announces formal investigation into CloudVault's business practices and whether marketing materials constituted deceptive advertising regarding data protection capabilities.",
+            "condition": "Triggers if FACT_005 becomes public knowledge, or if multiple media reports question company's truthfulness."
+        },
+        {
+            "id": "EVENT_009",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_006",
+            "text": "Former CloudVault engineer goes public in Reuters interview: 'We begged them to fix this. They cared more about margins than customer data. I couldn't be part of it anymore.' Provides exit interview excerpts.",
+            "condition": "Triggers if FACT_002 is public and company attempts to characterize the incident as unforeseeable or blames individual employee error."
+        },
+        {
+            "id": "EVENT_010",
+            "type": "INTERNAL_DISCOVERY",
+            "target_fact_id": "FACT_007",
+            "text": "Legal team discovers during preparation for regulatory filings that CEO David Park sold $8.7M in stock 3 weeks before the incident. While technically during allowed trading window, the optics are catastrophic given he knew about unresolved infrastructure risks.",
+            "condition": "Triggers during SEC disclosure review process, particularly if incident attracts regulatory scrutiny or securities fraud questions emerge."
+        },
+        {
+            "id": "EVENT_011",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Major enterprise customers including two Fortune 500 companies publicly announce they are migrating away from CloudVault, citing 'loss of trust.' CloudVault stock drops 34% in after-hours trading.",
+            "condition": "Triggers if FACT_004 and at least one of (FACT_002, FACT_005, FACT_006) become public knowledge."
+        },
+        {
+            "id": "EVENT_012",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_003",
+            "text": "Bombshell Bloomberg report reveals internal email from CFO Rebecca Chen explicitly rejecting the $4.2M infrastructure upgrade proposal, with quoted text showing she acknowledged the risk but prioritized 'growth targets.' Email obtained via discovery process in lawsuit.",
+            "condition": "Triggers during legal discovery phase if lawsuits proceed, or if whistleblower emerges. More likely if company has denied cost-cutting played a role."
+        },
+        {
+            "id": "EVENT_013",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Protesters gather outside CloudVault headquarters with signs reading 'Our Data Died for Your Profits' and 'Greed Deleted My Business.' Local news covers the demonstration extensively.",
+            "condition": "Triggers if FACT_003 or FACT_005 become public, revealing cost-cutting motivated the negligence."
+        },
+        {
+            "id": "EVENT_014",
+            "type": "INFORMATION_LEAK",
+            "target_fact_id": "FACT_007",
+            "text": "Wall Street Journal reports on CEO's $8.7M stock sale three weeks before data loss incident. Securities lawyers interviewed suggest possible insider trading implications if CEO knew of material risks. SEC opens preliminary inquiry.",
+            "condition": "Triggers if FACT_007 enters private knowledge and media scrutiny is high (multiple damaging facts already public), or if company leadership credibility is under attack."
+        },
+        {
+            "id": "EVENT_015",
+            "type": "EXTERNAL_REACTION",
+            "target_fact_id": "N/A",
+            "text": "Congressional committee announces hearings on cloud infrastructure regulation and data protection standards, specifically citing the CloudVault incident. CEO and CFO subpoenaed to testify under oath.",
+            "condition": "Triggers if FACT_003 and FACT_005 are both public, revealing systemic corporate negligence and deception. Represents maximum escalation scenario."
+        }
+    ]
+}
