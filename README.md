@@ -3,7 +3,7 @@
 **Benchmarking Strategic Ambiguity and Reputation Management in Large Language Models**
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue)](LICENSE)
 
 ## Overview
 
@@ -180,7 +180,7 @@ If you use Crisis-Bench in your research, please cite:
 
 ## License
 
-[license information placeholder]
+Apache License, Version 2.0, January 2004, http://www.apache.org/licenses/
 
 ---
 
