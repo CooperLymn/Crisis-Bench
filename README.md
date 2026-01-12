@@ -1,6 +1,8 @@
 # Crisis-Bench
 
-**Benchmarking Strategic Ambiguity and Reputation Management in Large Language Models**
+This is the code base for **Benchmarking Strategic Ambiguity and Reputation Management in Large Language Models**
+
+https://arxiv.org/abs/2601.05570
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue)](LICENSE)
@@ -170,11 +172,14 @@ Crisis-Bench/
 If you use Crisis-Bench in your research, please cite:
 
 ```bibtex
-@article{crisisbench2024,
-  title={Crisis-Bench: Benchmarking Strategic Ambiguity and Reputation Management in Large Language Models},
-  author={[Authors]},
-  journal={[Journal]},
-  year={2024}
+@article{lin2026crisisbenchbenchmarkingstrategicambiguity,
+      title={Crisis-Bench: Benchmarking Strategic Ambiguity and Reputation Management in Large Language Models}, 
+      author={Cooper Lin and Maohao Ran and Yanting Zhang and Zhenglin Wan and Hongwei Fan and Yibo Xu and Yike Guo and Wei Xue and Jun Song},
+      year={2026},
+      eprint={2601.05570},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2601.05570}, 
 }
 ```
 
